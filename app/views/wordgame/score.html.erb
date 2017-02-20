@@ -1,0 +1,11 @@
+<h1>Wordgame score</h1>
+
+<%= @result %>
+
+<form action="/game" method='GET'>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <input type="submit" value="New game ?" class="btn btn-primary btn-block">
+  <input type="hidden" name="nb_of_games" value="<%= @nb_of_games.to_i %>">
+
+</form>
